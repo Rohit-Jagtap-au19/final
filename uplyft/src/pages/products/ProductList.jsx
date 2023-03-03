@@ -23,8 +23,8 @@ import Deleteicon from "@mui/icons-material/Delete";
 import Swal from "sweetalert2";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import { fontSize, padding } from "@mui/system";
 import { useAppStore } from "../../appStore";
+import Skeleton from '@mui/material/Skeleton';
 
 import {
   collection,
@@ -273,6 +273,26 @@ export default function ProductList() {
             onRowsPerPageChange={handleChangeRowsPerPage}
           />
         </Paper>
+        
+      )}
+      {rows.length == 0 && (
+        <>
+          <Paper sx={{width:"98%",overflow:"hidden",padding:"12px"}}>
+          <Box height={20}/>
+          <Skeleton variant="rectangular" width={"100%"} height={30} />
+          <Box height={40}/>
+          <Skeleton variant="rectangular" width={"100%"} height={60} />
+          <Box height={20}/>
+          <Skeleton variant="rectangular" width={"100%"} height={60} />
+          <Box height={20}/>
+          <Skeleton variant="rectangular" width={"100%"} height={60} />
+          <Box height={20}/>
+          <Skeleton variant="rectangular" width={"100%"} height={60} />
+          <Box height={20}/>
+          <Skeleton variant="rectangular" width={"100%"} height={60} />
+          <Box height={20}/>
+          </Paper>
+        </>
       )}
     </>
   );
