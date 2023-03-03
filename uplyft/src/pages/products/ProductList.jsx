@@ -24,7 +24,7 @@ import Swal from "sweetalert2";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { fontSize, padding } from "@mui/system";
-import { async } from "@firebase/util";
+import { useAppStore } from "../../appStore";
 
 import {
   collection,
@@ -35,6 +35,8 @@ import {
   doc,
 } from "firebase/firestore";
 import AddProduct from "./AddProduct";
+import EditProduct from "./EditProduct";
+
 
 export default function ProductList() {
   const style = {
@@ -50,12 +52,20 @@ export default function ProductList() {
   };
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [rows, setRows] = useState([]);
   const empCollectionRef = collection(db, "products");
+  const setRows = useAppStore((state)=>state.setRows);
+  const rows = useAppStore((state)=>state.rows);
 
+  const [formid, setFormid] = useState("");
+
+  
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
+  const [editopen, setEditOpen] = useState(false);
+  const handleEditOpen = () => setEditOpen(true);
+  const handleEditClose = () => setEditOpen(false);
 
   useEffect(() => {
     getUsers();
@@ -104,6 +114,16 @@ export default function ProductList() {
       getUsers();
     }
   };
+  const editData = (id,name,Price,category)=>{
+    const data ={
+      id:id,
+      name:name,
+      Price: Price,
+      category:category
+    };
+    setFormid(data);
+    handleEditOpen()
+  }
 
   return (
     <>
@@ -117,6 +137,18 @@ export default function ProductList() {
         >
           <Box sx={style}>
             <AddProduct CloseEvent={handleClose}/>
+          </Box>
+        </Modal>
+        
+        <Modal
+          open={editopen}
+          // to close modal even clicked anywhere
+          // onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <EditProduct CloseEvent={handleEditClose} fid={formid}/>
           </Box>
         </Modal>
       </div>
@@ -208,6 +240,9 @@ export default function ProductList() {
                                 cursor: "pointer",
                               }}
                               className="cursor-pointer"
+                              onClick={()=>{
+                                editData(row.id, row.name, row.Price, row.category)
+                              }}
                             />
                             <Deleteicon
                               style={{
