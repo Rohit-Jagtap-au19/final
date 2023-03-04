@@ -83,13 +83,13 @@ export default function Sidenav() {
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton>
+          {/* <IconButton>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
               <ChevronLeftIcon />
             )}
-          </IconButton>
+          </IconButton> */}
         </DrawerHeader>
         <Divider />
         <List>

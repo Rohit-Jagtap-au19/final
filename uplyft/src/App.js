@@ -2,10 +2,10 @@ import './App.css';
 import {Routes,Route,BrowserRouter} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import Ask_Doubt from './pages/Ask_Doubt'
 import Settings from './pages/Settings'
 import Dashboard from './pages/Dashboard'
 import Analytics from './pages/Analytics';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -16,10 +16,8 @@ function App() {
       <Route exact path='/about' element={<About/>}></Route>
       <Route exact path='/dashbaord' element={<Dashboard/>}></Route>
       <Route exact path='/settings' element={<Settings/>}></Route>
-      <Route exact path='/products' element={<Ask_Doubt/>}></Route>
+      <Route exact path='/products' element={<Products/>}></Route>
       <Route exact path='/analytics' element={<Analytics/>}></Route>
-
-
     </Routes>
     </BrowserRouter>
     </>

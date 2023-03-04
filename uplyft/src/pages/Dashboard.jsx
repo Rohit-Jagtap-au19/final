@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 
 import Sidenav from '../components/Sidenav'
 import Navbar from '../components/Navbar'
+import ResponsiveDrawer from '../components/ResSide';
 
 
 export default function Dashboard() {
@@ -12,8 +13,9 @@ export default function Dashboard() {
     <Box height={30}/>
     <Box sx={{ display: 'flex' }}>
     <Sidenav/>
+    {/* <ResponsiveDrawer/> */}
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-      <h1>Soon Dashboard will be here</h1>
+      {/* <h1>Soon Dashboard will be here</h1> */}
       </Box>
     </Box>
     </>

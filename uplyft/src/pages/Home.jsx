@@ -25,17 +25,17 @@ export default function Home() {
       <div className="bgcolor">
         <Navbar />
         <Box height={80} />
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex"}}>
           <Sidenav />
           <Box
             component="main"
-            sx={{ flexGrow: 1, p: 3 }}
+            sx={{ flexGrow: 1, p: 3}}
             className="paddingall"
           >
             <Box height={20} />
             <Grid container spacing={2}>
-              <Grid xs={8}>
-                <Stack spacing={2} direction="row">
+              <Grid xs={8} sx={{display:{xs:"block",sm:"block"} }}>
+                <Stack spacing={2} direction="row" >
                   <Card
                     sx={{ minWidth: 49 + "%", height: 150 }}
                     className="gradient"
@@ -92,7 +92,7 @@ export default function Home() {
                 </Stack>
               </Grid>
 
-              <Grid xs={4}>
+              <Grid xs={4} >
                 <Stack spacing={2} className="paddingall">
                   <Card sx={{ maxWidth: 345 }} className="gradientlight">
                     <Stack spacing={2} direction="row">
@@ -123,8 +123,8 @@ export default function Home() {
             </Grid>
 
             <Box height={5} />
-            <Grid container spacing={2} className="paddingall">
-              <Grid xs={8} className="paddingall">
+            <Grid container spacing={2} className="paddingall" >
+              <Grid xs={8} className="paddingall" >
                 <Card sx={{ height: 60 + "vh" }}>
                   <CardContent>
                     <BarChart />

@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import ProductList from './products/ProductList';
 
 
-export default function Ask_Doubt() {
+export default function Products() {
   return (
     <>
     <div className="bgcolor">

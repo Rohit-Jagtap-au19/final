@@ -16,6 +16,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { useAppStore } from '../appStore';
+import Container from '@mui/material/Container';
+
 
 
 const AppBar = styled(MuiAppBar, {
@@ -167,6 +169,7 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" elevation={0} sx={{backgroundColor:"#ffffff",color:"#2f2f2f"}}>
+      <Container maxWidth="xl">
         <Toolbar>
           <IconButton
             size="large"
@@ -236,6 +239,7 @@ export default function Navbar() {
             </IconButton>
           </Box>
         </Toolbar>
+        </Container>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
