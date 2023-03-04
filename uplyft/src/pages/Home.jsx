@@ -102,7 +102,8 @@ export default function Home() {
               md={4}
               >
                 <Stack spacing={2} className="paddingall">
-                  <Card sx={{ maxWidth: 345 }} className="gradientlight">
+                  <Card sx={{ maxWidth: 345 }}
+                  className="gradientlight">
                     <Stack spacing={2} direction="row">
                       <div className="iconstyle">
                         <StorefrontIcon />
@@ -133,14 +134,14 @@ export default function Home() {
 
             <Box height={5} />
             <Grid container spacing={2} className="paddingall" >
-              <Grid xs={8} className="paddingall" >
+              <Grid xs={12} md={8}>
                 <Card sx={{ height: 60 + "vh" }}>
                   <CardContent>
                     <BarChart />
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid xs={4} className="paddingall">
+              <Grid xs={12} md={4} className="mt">
                 <Card sx={{ height: 60 + "vh" }}>
                   <CardContent>
                     <div>
