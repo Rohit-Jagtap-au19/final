@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Sidenav from '../components/Sidenav'
 import Navbar from '../components/Navbar'
 import ProductList from './products/ProductList';
+import ProductsList01 from './products/ProductsList01';
 
 
 export default function Products() {
@@ -16,6 +17,7 @@ export default function Products() {
     <Sidenav/>
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <ProductList/>
+      {/* <ProductsList01/> */}
       </Box>
     </Box>
     </div>

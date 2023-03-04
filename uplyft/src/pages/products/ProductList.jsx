@@ -153,6 +153,7 @@ export default function ProductList() {
         </Modal>
       </div>
       {rows.length > 0 && (
+
         <Paper sx={{ width: "100%", overflow: "hidden", padding: "12px" }}>
           <Typography
             gutterBottom
@@ -191,7 +192,7 @@ export default function ProductList() {
             </Button>
           </Stack>
           <Box height={10} />
-          <TableContainer sx={{ maxHeight: 440 }}>
+          <TableContainer sx={{ maxHeight: 440}}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>
@@ -275,8 +276,9 @@ export default function ProductList() {
         </Paper>
         
       )}
-      {rows.length == 0 && (
+      {rows.length === 0 && (
         <>
+        {/* Adding skeleton for reload */}
           <Paper sx={{width:"98%",overflow:"hidden",padding:"12px"}}>
           <Box height={20}/>
           <Skeleton variant="rectangular" width={"100%"} height={30} />
