@@ -32,7 +32,7 @@ export default function Analytics() {
               <Sidenav />
               <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <Grid container spacing={2}>
-                  <Grid xs={5} className="paddingall">
+                  <Grid xs={12} md={5} className="paddingall">
                     <Stack spacing={2} direction="row">
                       <Card
                         sx={{ minWidth: 49 + "%", height: 150 }}
@@ -42,7 +42,7 @@ export default function Analytics() {
                           <div className="iconstyle">
                             <Typography
                               gutterBottom
-                              variant="h4"
+                              variant="h5"
                               component="div"
                               sx={{ color: "white" }}
                             >
@@ -53,7 +53,7 @@ export default function Analytics() {
                               <CountUp
                                 delay={0.1}
                                 start={100}
-                                end={2}
+                                end={10}
                                 duration={2}
                               />
                             </Typography>
@@ -76,7 +76,7 @@ export default function Analytics() {
                           <div className="iconstyle">
                             <Typography
                               gutterBottom
-                              variant="h4"
+                              variant="h5"
                               component="div"
                               sx={{ color: "white" }}
                             >
@@ -174,22 +174,22 @@ export default function Analytics() {
                     </Stack>
                   </Grid>
 
-                  <Grid xs={4} className="paddingall">
-                    <Card sx={{ height: 37 + "vh", width: 38 + "vw" }}>
+                  <Grid xs={12} md={6}className="paddingall">
+                    <Card sx={{ height: 37 + "vh" }}>
                       <HBarChart />
                     </Card>
                   </Grid>
                 </Grid>
 
                 <Grid container spacing={2} className="paddingall">
-                  <Grid xs={8} className="paddingall">
+                  <Grid xs={12} md={8} className="paddingall">
                     <Card sx={{ height: 50 + "vh" }}>
                       <CardContent>
                         <GeoChart />
                       </CardContent>
                     </Card>
                   </Grid>
-                  <Grid xs={4} className="paddingall">
+                  <Grid xs={12} md={4} className="paddingall">
                     <Card sx={{ height: 50 + "vh" }}>
                       <CardContent>
                         <PieChart />
