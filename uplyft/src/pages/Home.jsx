@@ -29,15 +29,19 @@ export default function Home() {
           <Sidenav />
           <Box
             component="main"
-            sx={{ flexGrow: 1, p: 3}}
+            sx={{ flex: 1, p: 3}}
             className="paddingall"
           >
-            <Box height={20} />
-            <Grid container spacing={2}>
-              <Grid xs={8} sx={{display:{xs:"block",sm:"block"} }}>
+            <Box height={20}/>
+
+            <Grid container spacing={2} >
+              <Grid
+              xs={12}
+              md={8}
+              >
                 <Stack spacing={2} direction="row" >
                   <Card
-                    sx={{ minWidth: 49 + "%", height: 150 }}
+                    sx={{ minWidth: 49 + "%", height: 150}}
                     className="gradient"
                   >
                     <CardContent>
@@ -66,7 +70,9 @@ export default function Home() {
                     sx={{ minWidth: 49 + "%", height: 150 }}
                     className="gradientlight"
                   >
-                    <CardContent>
+                    <CardContent
+                        xs={12}
+                    >
                       <div className="iconstyle">
                         <ShoppingBagIcon />
                       </div>
@@ -92,7 +98,9 @@ export default function Home() {
                 </Stack>
               </Grid>
 
-              <Grid xs={4} >
+              <Grid xs={12}
+              md={4}
+              >
                 <Stack spacing={2} className="paddingall">
                   <Card sx={{ maxWidth: 345 }} className="gradientlight">
                     <Stack spacing={2} direction="row">
@@ -120,6 +128,7 @@ export default function Home() {
                   </Card>
                 </Stack>
               </Grid>
+
             </Grid>
 
             <Box height={5} />
