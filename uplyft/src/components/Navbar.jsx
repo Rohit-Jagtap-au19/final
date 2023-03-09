@@ -168,7 +168,7 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" elevation={0} sx={{backgroundColor:"#ffffff",color:"#2f2f2f"}}>
+      <AppBar position="fixed" elevation={0} sx={{backgroundColor:"#132c1f",color:"#fff"}}>
       <Container maxWidth="xl">
         <Toolbar>
           <IconButton
@@ -187,7 +187,7 @@ export default function Navbar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            UPLYFT
           </Typography>
           <Search>
             <SearchIconWrapper>

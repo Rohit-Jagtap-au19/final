@@ -82,17 +82,9 @@ export default function Sidenav() {
       <Box height={30} />
 
       <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          {/* <IconButton>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton> */}
-        </DrawerHeader>
+        <DrawerHeader style={{marginTop:-2}}/>
         <Divider />
-        <List>
+        <List sx={{height:100 + 'vh',backgroundColor:"#132c1f",color:"#fff"}}>
 
           <ListItem
             disablePadding
