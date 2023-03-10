@@ -11,7 +11,7 @@ export default function Settings() {
     <>
     <Navbar/>
     <Box height={70}/>
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} className="bgcolor">
     <Sidenav/>
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
     <List/>

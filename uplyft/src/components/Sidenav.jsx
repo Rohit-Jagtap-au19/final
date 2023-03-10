@@ -13,6 +13,7 @@ import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 import FactoryIcon from '@mui/icons-material/Factory';
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import InterpreterModeIcon from '@mui/icons-material/InterpreterMode';
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
@@ -265,6 +266,31 @@ export default function Sidenav() {
                 }}
               ></FactoryIcon>
               <ListItemText primary="Internship Student" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem
+            disablePadding
+            sx={{ display: "block" }}
+            onClick={() => {
+              navigate("/videointerview");
+            }}
+          >
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <InterpreterModeIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              ></InterpreterModeIcon>
+              <ListItemText primary="Video Interview" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
 

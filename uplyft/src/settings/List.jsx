@@ -86,7 +86,7 @@ export default function List() {
   };
 
   return (
-    <Card sx={{minHeight:84 +'vh'}}>
+    <Card sx={{minHeight:84 +'vh'}} className="bgcolor">
       <CardContent>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
