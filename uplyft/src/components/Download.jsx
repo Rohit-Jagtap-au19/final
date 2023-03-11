@@ -1,7 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
 import { Box } from "@mui/system";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
@@ -16,8 +15,7 @@ export default function Download() {
           Resources to help you with the task
         </Typography>
       <Grid container md={12} xs={12} direction={'row'} spacing={3}>
-        <Stack spacing={1} direction={"row"}>
-        </Stack>
+        
           <Grid item md={6} xs={12} alignItems={'center'}>
             <Card variant="outlined" className="paddingall">
               <PictureAsPdfIcon fontSize={"large"}/>
