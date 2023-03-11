@@ -14,10 +14,10 @@ export default function Home() {
     <>
     <Navbar/>
     <Box height={90}/>
-    <Box sx={{ display: 'flex' }} className='bgcolor'>
+    <Box sx={{ display: 'flex' }} className='bgcolor paddingall'>
     <Sidenav/>
     {/* <ResponsiveDrawer/> */}
-    <Box component="main" sx={{ flexGrow: 1, p: 3 }} >
+    <Box component="main" >
       {/* <h1>Soon Dashboard will be here</h1> */}
       {/* <CompanyCard/> */}
       <Upload/>

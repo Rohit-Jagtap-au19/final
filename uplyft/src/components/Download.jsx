@@ -11,31 +11,33 @@ import { Link } from "@mui/material";
 export default function Download() {
   return (
     <Box>
-      <Grid container md={12} xs={12} direction={"column"}>
-        <Typography variant="h5">
+    <Card className="paddingall">
+        <Typography variant="h5" style={{marginBottom:50}}>
           Resources to help you with the task
         </Typography>
+      <Grid container md={12} xs={12} direction={'row'} spacing={3}>
         <Stack spacing={1} direction={"row"}>
-          <Grid item md={3} xs={6} alignItems={'center'} spacing={2}>
-            <Card variant="outlined" className="paddingall">
-              <PictureAsPdfIcon fontSize={"large"}/>
-              <Typography variant="h5">
-                Resources to help you with the task
-              </Typography>
-              <Link>Click To Download file <ArrowRightAltIcon/></Link>
-            </Card>
-          </Grid>
-          <Grid item md={3} xs={6} alignItems={'center'}>
-            <Card variant="outlined" className="paddingall">
-              <PictureAsPdfIcon fontSize={"large"}/>
-              <Typography variant="h5">
-                Resources to help you with the task
-              </Typography>
-              <Link>Click To Download file <ArrowRightAltIcon/></Link>
-            </Card>
-          </Grid>
         </Stack>
+          <Grid item md={6} xs={12} alignItems={'center'}>
+            <Card variant="outlined" className="paddingall">
+              <PictureAsPdfIcon fontSize={"large"}/>
+              <Typography variant="h5">
+                Resources to help you with the task
+              </Typography>
+              <Link>Click To Download file <ArrowRightAltIcon/></Link>
+            </Card>
+          </Grid>
+          <Grid item md={6} xs={12} alignItems={'center'}>
+            <Card variant="outlined" className="paddingall">
+              <PictureAsPdfIcon fontSize={"large"}/>
+              <Typography variant="h5">
+                Resources to help you with the task
+              </Typography>
+              <Link>Click To Download file <ArrowRightAltIcon/></Link>
+            </Card>
+          </Grid>
       </Grid>
+      </Card>
     </Box>
   );
 }
