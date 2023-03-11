@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
+import Button from "@mui/material/Button";
 import { useRecordWebcam } from "react-record-webcam";
 import Grid from "@mui/material/Unstable_Grid2";
 import { styled } from "@mui/material/styles";
@@ -19,6 +20,13 @@ export default function VideoRecording(props) {
   const saveFile = async () => {
     const blob = await recordWebcam.getRecording();
   };
+   
+  const [isenable, setIsEnable] = useState(false)
+
+  const buttons = (status)=>{
+    setIsEnable(true)
+    recordWebcam.open()
+  }
   return (
     <>
       <Box>
@@ -26,13 +34,19 @@ export default function VideoRecording(props) {
           <Grid Item md={3} xs={6}>
             <p>Camera status: {recordWebcam.status}</p>
           </Grid>
-          <Grid Item md={3} xs={6}>
-            <Item style={{ cursor: "pointer" }} onClick={recordWebcam.open}>
-              Start Video Interview
-            </Item>
+          <Grid Item md={1} xs={3}>
+          <Button variant="contained" onClick={buttons} component="label">
+            ON
+          </Button>
+           
+          </Grid>
+          <Grid Item md={1} xs={3}>
+          <Button variant="contained" onClick={recordWebcam.close} component="label" disabled={!isenable}>
+            OFF
+          </Button>
           </Grid>
         </Grid>
-
+        
         {/* this will effect preview */}
 
         <Grid
@@ -46,30 +60,45 @@ export default function VideoRecording(props) {
         >
           <Grid Item md={6} xs={12} className="mb">
             <Paper className="ml" style={{ padding: "30px 50px" }}>
-              <video ref={recordWebcam.webcamRef} autoPlay muted />
+              <video
+                style={{ width: "100%", height: "70%" }}
+                ref={recordWebcam.webcamRef}
+                autoPlay
+                muted
+              />
             </Paper>
           </Grid>
           <Grid Item md={6} xs={12} className="mb">
             <Paper className="ml" style={{ padding: "30px 50px" }}>
-              <video ref={recordWebcam.previewRef} autoPlay muted controls height={'100%'}/>
+              <video
+                ref={recordWebcam.previewRef}
+                autoPlay
+                muted
+                controls
+                style={{ width: "100%", height: "70%" }}
+              />
             </Paper>
           </Grid>
         </Grid>
 
         {/* this will efffect buttons */}
         <Grid container md={6.5} xs={12} flex justifyContent={"space-between"}>
-          <Item onClick={recordWebcam.start} style={{ cursor: "pointer" }}>
+          <Button onClick={recordWebcam.start} variant="contained" disabled={!isenable}>
             Start recording
-          </Item>
-          <Item style={{ cursor: "pointer" }} onClick={recordWebcam.stop}>
+          </Button>
+
+          <Button onClick={recordWebcam.stop} variant="contained" disabled={!isenable}>
             Stop recording
-          </Item>
-          <Item style={{ cursor: "pointer" }} onClick={recordWebcam.retake}>
+          </Button>
+
+          <Button onClick={recordWebcam.retake} variant="contained" disabled={!isenable}>
             Retake
-          </Item>
-          <Item style={{ cursor: "pointer" }} onClick={saveFile}>
-            Save file to server
-          </Item>
+          </Button>
+
+          <Button variant="contained" onClick={saveFile} component="label" disabled={!isenable}>
+            Upload
+          </Button>
+          
         </Grid>
       </Box>
     </>
