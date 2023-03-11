@@ -6,18 +6,22 @@ import Sidenav from '../components/Sidenav'
 import Navbar from '../components/Navbar'
 import ResponsiveDrawer from '../components/ResSide';
 import CompanyCard from '../components/CompanyCard';
+import Upload from '../components/Upload';
+import Download from '../components/Download';
 export default function Home() {
   return (
     
     <>
     <Navbar/>
-    <Box height={30}/>
-    <Box sx={{ display: 'flex' }}>
+    <Box height={90}/>
+    <Box sx={{ display: 'flex' }} className='bgcolor'>
     <Sidenav/>
     {/* <ResponsiveDrawer/> */}
-    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+    <Box component="main" sx={{ flexGrow: 1, p: 3 }} >
       {/* <h1>Soon Dashboard will be here</h1> */}
-      <CompanyCard/>
+      {/* <CompanyCard/> */}
+      <Upload/>
+      <Download/>
       </Box>
     </Box>
     </>
