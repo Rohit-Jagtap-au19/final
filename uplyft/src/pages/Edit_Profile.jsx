@@ -2,16 +2,8 @@ import React from "react";
 import { Box, Paper } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Sidenav from "../components/Sidenav";
-import {
-  Card,
-  Grid,
-  CardContent,
-  Typography,
-  Stack,
-  Button,
-  TextField,
-} from "@mui/material";
-import '../../src/dash.css'
+import { Grid, Typography, Stack, Button, TextField } from "@mui/material";
+import "../../src/dash.css";
 import profilepic from "../assets/blankprofile.webp";
 
 export default function Edit_Profile() {
@@ -22,7 +14,7 @@ export default function Edit_Profile() {
       <Box sx={{ display: "flex" }}>
         <Sidenav />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }} className="bgcolor">
-          <Paper style={{padding:'10px 50px'}}>
+          <Paper style={{ padding: "10px 50px" }}>
             <Grid item md={12} sx={12}>
               <Stack direction={"row"} justifyContent={"space-between"}>
                 <Typography variant="h4">Edit Profile</Typography>
@@ -37,10 +29,14 @@ export default function Edit_Profile() {
                 />
               </Stack>
             </Grid>
-            <Grid container style={{padding:'0px 20%'}}>
-              <Grid item md={12} sx={12} >
-                <Stack direction={"row"} justifyContent={"space-evenly"} spacing={2}>
-                  <Grid direction={"column"} md={6} sx={12} className='mb'>
+            <Grid container style={{ padding: "0px 20%" }}>
+              <Grid item md={12} sx={12}>
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-evenly"}
+                  spacing={2}
+                >
+                  <Grid direction={"column"} md={6} sx={12} className="mb">
                     <Typography variant="h6">First Name</Typography>
                     <TextField
                       id="outlined-basic"
@@ -49,7 +45,7 @@ export default function Edit_Profile() {
                       style={{ width: "100%" }}
                     />
                   </Grid>
-                  <Grid direction={"column"} md={6} sx={12} className='mb'>
+                  <Grid direction={"column"} md={6} sx={12} className="mb">
                     <Typography variant="h6">Last Name</Typography>
                     <TextField
                       id="outlined-basic"
@@ -60,7 +56,7 @@ export default function Edit_Profile() {
                   </Grid>
                 </Stack>
               </Grid>
-              <Grid md={12} sx={12} className='mb'>
+              <Grid md={12} sx={12} className="mb">
                 <Typography variant="h6">Email</Typography>
                 <TextField
                   id="outlined-basic"
@@ -69,7 +65,7 @@ export default function Edit_Profile() {
                   style={{ width: "100%" }}
                 />
               </Grid>
-              <Grid md={12} sx={12} className='mb'>
+              <Grid md={12} sx={12} className="mb">
                 <Typography variant="h6">Address</Typography>
                 <TextField
                   id="outlined-basic"
@@ -79,7 +75,7 @@ export default function Edit_Profile() {
                 />
               </Grid>
 
-              <Grid md={12} sx={12} className='mb'>
+              <Grid md={12} sx={12} className="mb">
                 <Typography variant="h6">Contact No</Typography>
                 <TextField
                   id="outlined-basic"
@@ -90,9 +86,13 @@ export default function Edit_Profile() {
                 />
               </Grid>
 
-              <Grid item md={12} sx={12} >
-                <Stack direction={"row"} justifyContent={"space-evenly"} spacing={2}>
-                  <Grid direction={"column"} md={6} sx={12} className='mb'>
+              <Grid item md={12} sx={12}>
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-evenly"}
+                  spacing={2}
+                >
+                  <Grid direction={"column"} md={6} sx={12} className="mb">
                     <Typography variant="h6">City</Typography>
                     <TextField
                       id="outlined-basic"
@@ -101,7 +101,7 @@ export default function Edit_Profile() {
                       style={{ width: "100%" }}
                     />
                   </Grid>
-                  <Grid direction={"column"} md={6} sx={12} className='mb'>
+                  <Grid direction={"column"} md={6} sx={12} className="mb">
                     <Typography variant="h6">State</Typography>
                     <TextField
                       id="outlined-basic"
@@ -113,9 +113,13 @@ export default function Edit_Profile() {
                 </Stack>
               </Grid>
 
-              <Grid item md={12} sx={12} className='mb'>
-                <Stack direction={"row"} justifyContent={"space-evenly"} spacing={2}>
-                  <Grid direction={"column"} md={6} sx={12} className='mb'>
+              <Grid item md={12} sx={12} className="mb">
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-evenly"}
+                  spacing={2}
+                >
+                  <Grid direction={"column"} md={6} sx={12} className="mb">
                     <Typography variant="h6">Prefered City</Typography>
                     <TextField
                       id="outlined-basic"
@@ -124,7 +128,7 @@ export default function Edit_Profile() {
                       style={{ width: "100%" }}
                     />
                   </Grid>
-                  <Grid direction={"column"} md={6} sx={12} className='mb'>
+                  <Grid direction={"column"} md={6} sx={12} className="mb">
                     <Typography variant="h6">Undergrad Degree</Typography>
                     <TextField
                       id="outlined-basic"
@@ -136,7 +140,7 @@ export default function Edit_Profile() {
                 </Stack>
               </Grid>
 
-              <Grid md={12} sx={12} className='mb'>
+              <Grid md={12} sx={12} className="mb">
                 <Typography variant="h6">Password</Typography>
                 <TextField
                   id="outlined-basic"
@@ -146,7 +150,7 @@ export default function Edit_Profile() {
                   style={{ width: "100%" }}
                 />
               </Grid>
-              <Stack spacing={2} direction="row" style={{marginTop:'10px'}}>
+              <Stack spacing={2} direction="row" style={{ marginTop: "10px" }}>
                 <Button variant="outlined">Cancel</Button>
                 <Button variant="contained">Save</Button>
               </Stack>
