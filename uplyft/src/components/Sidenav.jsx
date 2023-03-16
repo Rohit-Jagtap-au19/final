@@ -198,7 +198,7 @@ export default function Sidenav() {
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
-              navigate("/Companydashboard");
+              navigate("/editprofile");
             }}
           >
             <ListItemButton
@@ -215,11 +215,11 @@ export default function Sidenav() {
                   justifyContent: "center",
                 }}
               ></FactoryIcon>
-              <ListItemText primary="Company dashboard" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Edit Profile" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
 
-          <ListItem
+          {/* <ListItem
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
@@ -242,9 +242,9 @@ export default function Sidenav() {
               ></FactoryIcon>
               <ListItemText primary="Company internship" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
           
-          <ListItem
+          {/* <ListItem
             disablePadding
             sx={{ display: "block" }}
             onClick={() => {
@@ -267,7 +267,7 @@ export default function Sidenav() {
               ></FactoryIcon>
               <ListItemText primary="Internship Student" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
 
           <ListItem
             disablePadding

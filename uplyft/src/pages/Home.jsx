@@ -19,9 +19,9 @@ export default function Home() {
     {/* <ResponsiveDrawer/> */}
     <Box component="main" >
       {/* <h1>Soon Dashboard will be here</h1> */}
-      {/* <CompanyCard/> */}
-      <Upload/>
-      <Download/>
+      <CompanyCard/>
+      {/* <Upload/>
+      <Download/> */}
       </Box>
     </Box>
     </>

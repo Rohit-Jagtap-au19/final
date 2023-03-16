@@ -10,6 +10,7 @@ import Company_Dashboard from './pages/company/Company_Dashboard';
 import CompanyInternship from './pages/company/CompanyInternship';
 import InternshipStudent from './pages/company/InternshipStudent';
 import Interview from './pages/Interview';
+import Edit_Profile from './pages/Edit_Profile';
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
       <Route exact path='/dashbaord' element={<Dashboard/>}></Route>
       <Route exact path='/products' element={<Products/>}></Route>
       <Route exact path='/analytics' element={<Analytics/>}></Route>
-      <Route exact path='/Companydashboard' element={<Company_Dashboard/>}></Route>
-      <Route exact path='/Companyinternship' element={<CompanyInternship/>}></Route>
-      <Route exact path='/internshipstudent' element={<InternshipStudent/>}></Route>
+      <Route exact path='/editprofile' element={<Edit_Profile/>}></Route>
+      {/* <Route exact path='/Companyinternship' element={<CompanyInternship/>}></Route> */}
+      {/* <Route exact path='/internshipstudent' element={<InternshipStudent/>}></Route> */}
       <Route exact path='/videointerview' element={<Interview/>}></Route>
 
 

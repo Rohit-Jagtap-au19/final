@@ -8,7 +8,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import Stack from "@mui/material/Stack";
 export default function Upload() {
   return (
-    <Box>
+    <Box >
     {/* UPLOAD BUTTON 1 */}
       <Card className="paddingall">
         <Typography variant="h5" style={{ marginBottom: 50 }}>
@@ -48,7 +48,7 @@ export default function Upload() {
 
     {/* UPLOAD BUTTON 2 */}
 
-      <Card className="paddingall">
+      {/* <Card className="paddingall">
         <Typography variant="h5" style={{ marginBottom: 50 }}>
           Submit Your Work
         </Typography>
@@ -84,7 +84,7 @@ export default function Upload() {
             </Card>
           </Grid>
         </Grid>
-      </Card>
+      </Card> */}
     </Box>
   );
 }
