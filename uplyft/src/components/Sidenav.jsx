@@ -1,18 +1,15 @@
 import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled} from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
 import SettingsIcon from "@mui/icons-material/Settings";
 import HomeIcon from "@mui/icons-material/Home";
 import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 import FactoryIcon from '@mui/icons-material/Factory';
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import InterpreterModeIcon from '@mui/icons-material/InterpreterMode';
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -20,8 +17,6 @@ import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../appStore";
-
-import Home from "../pages/Home";
 
 const drawerWidth = 240;
 
@@ -73,8 +68,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function Sidenav() {
-  const theme = useTheme();
-  // const [open, setOpen] = React.useState(true);
+
   const navigate = useNavigate();
   const open = useAppStore((state) => state.dopen);
 

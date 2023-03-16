@@ -6,9 +6,6 @@ import Settings from './pages/Settings'
 import Dashboard from './pages/Dashboard'
 import Analytics from './pages/Analytics';
 import Products from './pages/Products';
-import Company_Dashboard from './pages/company/Company_Dashboard';
-import CompanyInternship from './pages/company/CompanyInternship';
-import InternshipStudent from './pages/company/InternshipStudent';
 import Interview from './pages/Interview';
 import Edit_Profile from './pages/Edit_Profile';
 
